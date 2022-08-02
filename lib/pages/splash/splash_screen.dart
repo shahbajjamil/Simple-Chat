@@ -9,37 +9,78 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AppImage.bg),
-            fit: BoxFit.cover,
+        decoration: const BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColor.lightGreen,
+              // AppColor.darkreen,s
+              AppColor.darkreen,
+              AppColor.darkreen,
+            ],
           ),
+          // image: DecorationImage(
+          //   image: AssetImage(AppImage.bg),
+          //   fit: BoxFit.cover,
+          // ),
         ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(AppImage.logo, width: 150),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 20),
-                child: Text(
-                  'Simple Chat',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontFamily: "Pacifico",
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.primaryBlue,
-                  ),
-                ),
+              Expanded(
+                flex: 3,
+                child: Container(),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
-                  'Chat with your closest friends anywhere in the world',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Find People &\nBe Social',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.white,
+                        ),
+                      ),
+                      const Text(
+                        "Find your all friends in one place by\nsigning the apps quick&easily.",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: AppColor.white,
+                        ),
+                      ),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                        decoration: BoxDecoration(
+                          color: AppColor.white,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Text("Connect Facebook",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: AppColor.black,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      Text("Not now",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: AppColor.white,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(
+                        height: MediaQuery.of(context).padding.bottom,
+                      ),
+                    ],
                   ),
                 ),
               ),
