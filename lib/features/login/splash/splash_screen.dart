@@ -5,6 +5,8 @@ import 'package:simplechat/Constants/app_color.dart';
 import 'package:simplechat/Constants/image_constants.dart';
 import 'package:simplechat/Utils/screen_size.dart';
 
+import '../phone_login/phone_login_screen.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -51,8 +53,8 @@ class _SplashScreenState extends State<SplashScreen> {
             colors: [
               AppColor.lightGreen,
               // AppColor.darkreen,s
-              AppColor.darkreen,
-              AppColor.darkreen,
+              AppColor.darkGreen,
+              AppColor.darkGreen,
             ],
           ),
         ),
@@ -157,19 +159,27 @@ class _SplashScreenState extends State<SplashScreen> {
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: const Text("Connect Facebook",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 18,
                               color: AppColor.black,
                               fontWeight: FontWeight.bold,
                             )),
                       ),
                     ),
-                    const Text("Not now",
-                        style: const TextStyle(
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, PhoneLoginScreen.routeName);
+                      },
+                      child: const Text(
+                        "Not now",
+                        style: TextStyle(
                           fontSize: 18,
                           color: AppColor.white,
                           fontWeight: FontWeight.bold,
-                        )),
+                        ),
+                      ),
+                    ),
                     SizedBox(
                       height: MediaQuery.of(context).padding.bottom,
                     ),
