@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:simplechat/Constants/app_color.dart';
 import 'package:simplechat/Constants/image_constants.dart';
 
+import 'otp_Input_screen.dart';
+
 class PhoneLoginScreen extends StatefulWidget {
   const PhoneLoginScreen({Key? key}) : super(key: key);
   static const String routeName = '/Phone_Login_Screen';
@@ -69,9 +71,9 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
                     decoration: InputDecoration(
                       labelText: 'Mobile Number',
                       errorStyle: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.darkGreen),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
                       labelStyle: const TextStyle(fontSize: 20),
                       prefixIcon: InkWell(
                         onTap: () {
@@ -145,15 +147,14 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
                     child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // Navigator.of(context).pushNamed(OTPScreen.routeName,arguments: _phoneNumberController.text);
+                          Navigator.of(context).pushNamed(
+                              OtpInputScreen.routeName,
+                              arguments: _countryCode+_phoneNumberController.text);
                         }
                       },
                       style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.all(15),
-                          // shadowColor: AppColor.darkGreen.withOpacity(0.5),
                           primary: AppColor.darkGreen,
-                          // textStyle: ,
-
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
