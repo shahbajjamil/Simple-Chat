@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        useMaterial3: true,
+        // useMaterial3: true,
         primarySwatch: Colors.teal,
       ),
       onGenerateRoute: (settings) => generateRoutes(settings),

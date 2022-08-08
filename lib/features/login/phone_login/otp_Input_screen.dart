@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pinput/pinput.dart';
 import 'package:simplechat/Constants/app_color.dart';
+import 'package:simplechat/features/dashboard/dashboard.dart';
 
 import '../../../Constants/image_constants.dart';
 
@@ -109,7 +110,11 @@ class _OtpInputScreenState extends State<OtpInputScreen> {
                   margin: const EdgeInsets.symmetric(vertical: 20),
                   // height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, DashboardScreen.routeName, (route) => false);
+                      // Navigator.pushAndRemoveUntil(context, HomeScreen.routeName);
+                    },
                     style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.all(15),
                         primary: AppColor.darkGreen,
