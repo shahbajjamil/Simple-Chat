@@ -4,9 +4,10 @@ import 'package:simplechat/Utils/screen_size.dart';
 import 'package:simplechat/features/message/screen/message_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key, required this.scrollViewController}) : super(key: key);
+  const HomeScreen({Key? key, required this.scrollViewController})
+      : super(key: key);
   static const String routeName = '/Message_Screen';
-final  ScrollController scrollViewController;
+  final ScrollController scrollViewController;
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -39,8 +40,8 @@ class _HomeScreenState extends State<HomeScreen>
                   : tabController.index == 1
                       ? "All Groups"
                       : "All Contacts",
-              style: TextStyle(
-                fontSize: 30,
+              style: const TextStyle(
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -48,8 +49,8 @@ class _HomeScreenState extends State<HomeScreen>
             pinned: true,
             floating: true,
             bottom: TabBar(
-              labelStyle: TextStyle(
-                fontSize: 20,
+              labelStyle: const TextStyle(
+                fontSize: 18,
                 // fontWeight: FontWeight.bold,
               ),
               controller: tabController,
@@ -64,18 +65,18 @@ class _HomeScreenState extends State<HomeScreen>
             delegate: SliverChildListDelegate(
               [
                 Container(
-                  height: screenHeight(context) * 0.8,
+                  height: screenHeight(context) * 0.9,
                   child: TabBarView(
                     controller: tabController,
                     children: [
-                      MessageScreen(),
+                      const MessageScreen(),
                       Container(
                         color: Colors.yellowAccent,
-                        child: Center(
+                        child: const Center(
                           child: Text('Groups'),
                         ),
                       ),
-                      Center(child: Text('Call')),
+                      const Center(child: const Text('Call')),
                     ],
                   ),
                 ),

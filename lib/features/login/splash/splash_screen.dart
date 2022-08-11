@@ -128,17 +128,18 @@ class _SplashScreenState extends State<SplashScreen> {
                       'Find People &\nBe Social',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        color: AppColor.white,
-                      ),
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.white,
+                          letterSpacing: 1),
                     ),
                     const Text(
                       "Find your all friends in one place by\nsigning the apps quick&easily.",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         color: AppColor.white,
+                        height: 1.5,
                       ),
                     ),
                     InkWell(
@@ -160,7 +161,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         ),
                         child: const Text("Connect Facebook",
                             style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 16,
                               color: AppColor.black,
                               fontWeight: FontWeight.bold,
                             )),
@@ -174,7 +175,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       child: const Text(
                         "Not now",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: AppColor.white,
                           fontWeight: FontWeight.bold,
                         ),

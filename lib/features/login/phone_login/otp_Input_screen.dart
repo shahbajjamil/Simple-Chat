@@ -62,7 +62,7 @@ class _OtpInputScreenState extends State<OtpInputScreen> {
                 Image.asset(AppImage.otpFemale),
                 const Text(
                   'Verification Code',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +70,7 @@ class _OtpInputScreenState extends State<OtpInputScreen> {
                     Text(
                       "+$args",
                       style: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.w400),
+                          fontSize: 18, fontWeight: FontWeight.w400),
                     ),
                     const SizedBox(width: 10),
                     InkWell(
@@ -87,7 +87,7 @@ class _OtpInputScreenState extends State<OtpInputScreen> {
                   child: Text(
                     'OTP has been sent to your mobile number. Please verify',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                   ),
                 ),
                 Pinput(
@@ -126,7 +126,7 @@ class _OtpInputScreenState extends State<OtpInputScreen> {
                       'Next',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.w600),
                     ),
                   ),

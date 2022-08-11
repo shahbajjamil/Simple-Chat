@@ -40,15 +40,15 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
                   Image.asset(AppImage.otpMale),
                   const Text(
                     'Enter Your Mobile Number',
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
                   ),
                   const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                     child: Text(
-                      'You\'ll receive a 6 digit code to verify next.',
+                      'You\'ll receive a 6 digit code\nto verify next.',
                       textAlign: TextAlign.center,
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
                     ),
                   ),
                   TextFormField(
@@ -66,15 +66,14 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
                       LengthLimitingTextInputFormatter(10),
                       FilteringTextInputFormatter.digitsOnly,
                     ],
-                    style: const TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.w600),
+                    style: const TextStyle(fontWeight: FontWeight.w600),
                     decoration: InputDecoration(
                       labelText: 'Mobile Number',
                       errorStyle: const TextStyle(
-                        fontSize: 15,
+                        // fontSize: 15,
                         fontWeight: FontWeight.w600,
                       ),
-                      labelStyle: const TextStyle(fontSize: 20),
+                      // labelStyle: const TextStyle(),
                       prefixIcon: InkWell(
                         onTap: () {
                           print('Country Code');
@@ -124,9 +123,9 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
                             children: [
                               Text("+" + _countryCode,
                                   style: const TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.w600)),
-                              const SizedBox(width: 5),
+                              // const SizedBox(width: 5),
                               const Icon(Icons.arrow_drop_down),
                             ],
                           ),
@@ -149,7 +148,8 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
                         if (_formKey.currentState!.validate()) {
                           Navigator.of(context).pushNamed(
                               OtpInputScreen.routeName,
-                              arguments: _countryCode+_phoneNumberController.text);
+                              arguments:
+                                  _countryCode + _phoneNumberController.text);
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -163,7 +163,7 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
                         'Next',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 18,
                             fontWeight: FontWeight.w600),
                       ),
                     ),

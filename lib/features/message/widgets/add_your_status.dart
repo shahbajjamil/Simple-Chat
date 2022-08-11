@@ -38,7 +38,7 @@ class AddYourStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: screenWidth(context) * 0.2 + 10,
+      width: screenWidth(context) * 0.2,
       // height: screenWidth(context) * 0.2 + 10,
       child: Column(
         children: [
@@ -78,7 +78,7 @@ class AddYourStatus extends StatelessWidget {
               maxLines: 1,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 15,
+                fontSize: 14,
               ),
             ),
           )
