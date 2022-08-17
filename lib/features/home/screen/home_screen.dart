@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simplechat/Constants/app_color.dart';
 import 'package:simplechat/Utils/screen_size.dart';
+import 'package:simplechat/features/call/screen/call_screen.dart';
+import 'package:simplechat/features/groups/screen/groups_screen.dart';
 import 'package:simplechat/features/message/screen/message_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -70,13 +72,8 @@ class _HomeScreenState extends State<HomeScreen>
                     controller: tabController,
                     children: [
                       const MessageScreen(),
-                      Container(
-                        color: Colors.yellowAccent,
-                        child: const Center(
-                          child: Text('Groups'),
-                        ),
-                      ),
-                      const Center(child: const Text('Call')),
+                      const GroupsScreen(),
+                      const CallScreen(),
                     ],
                   ),
                 ),

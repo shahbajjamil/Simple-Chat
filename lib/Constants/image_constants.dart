@@ -6,6 +6,9 @@ class AppImage {
   static String logo = '${path}logo.png';
   static String otpMale = '${path}otpm.png';
   static String otpFemale = '${path}otpf.png';
+  static String groupbg = '${path}groupbg.png';
+  static String callbg = '${path}nocall.png';
+  static String msgbg = '${path}nomsg.png';
 }
 
 class AppIcon {

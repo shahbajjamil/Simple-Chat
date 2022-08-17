@@ -37,7 +37,7 @@ class SimpleProfile extends StatelessWidget {
               //   width: 2,
               // ),
               shape: BoxShape.circle,
-              color: Colors.green,
+              color: AppColor.grey.withOpacity(0.5),
               image: DecorationImage(image: NetworkImage(userImageUrl))),
         ),
         Positioned(

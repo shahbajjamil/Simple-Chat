@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simplechat/Constants/app_color.dart';
+import 'package:simplechat/Constants/image_constants.dart';
 import 'package:simplechat/Utils/screen_size.dart';
+import 'package:simplechat/features/home/widgets/no_data_widegt.dart';
 import 'package:simplechat/features/message/widgets/add_your_status.dart';
 import 'package:simplechat/features/message/widgets/simple_profile.dart';
 import 'package:simplechat/features/message/widgets/status_message_screen.dart';
@@ -41,6 +43,12 @@ class _MessageScreenState extends State<MessageScreen> {
                 }
               })),
         ),
+        // SliverList(delegate: SliverChildListDelegate([])),
+        // NoDataWidgets(
+        //     title: "No Coversation",
+        //     description:
+        //         "You didn't made any conversation yet,\nplease start conversation.",
+        //     imageUrl: AppImage.msgbg),
         ChatListCard(),
         ChatListCard(),
         ChatListCard(),
